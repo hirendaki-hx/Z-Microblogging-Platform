@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper center horizontally */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Container - CENTERED */
+.container {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+
+/* Input wrapper */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Input - FIXED ADDRESS WIDTH */
+.input-box input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #333;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-box input:focus {
+    border-color: #1d9bf0;
+}
+
+/* Error state */
+.input-box.has-error input {
+    border-color: #ff4444 !important;
+    border-width: 2px;
+}
+
+.input-box.has-error input:focus {
+    border-color: #ff4444 !important;
+}
+
+.input-box.has-error label {
+    color: #ff4444 !important;
+}
+
+/* Floating label */
+.input-box label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    background: #000;
+    padding: 0 5px;
+    transition: 0.2s ease;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #1d9bf0;
+}
+
+.input-box.has-error input:focus + label,
+.input-box.has-error input:not(:placeholder-shown) + label {
+    color: #ff4444 !important;
+}
+
+.input-box input::placeholder {
+    color: transparent;
+}
+
+/* Button */
+.btn {
+    padding: 11px;
+    margin: 20px 0 12px 0;
+    border-radius: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+}
+.btn:hover {
+    background: #cfcfcf;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #aaa;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #444;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Error styles */
+.error-space {
+    height: 18px;
+    font-size: 13px;
+    color: #ff4444 !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.common-error {
+    text-align: center;
+    color: #ff4444;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ff4444;
+    border-radius: 6px;
+    background: rgba(255, 68, 68, 0.1);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Horizontal rows */
+.row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.row .input-box {
+    flex: 1;
+    min-width: 0; /* PREVENTS OVERFLOW */
+}
+
+.row .error-space {
+    flex: 1;
+    min-width: 0; /* PREVENTS OVERFLOW */
+}
+
+/* Full width input for address */
+.full-width {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Phone number input specific styling */
+.input-box input[type="tel"] {
+    letter-spacing: 1px;
+}
+
+/* Prevent spinner arrows in number input */
+.input-box input[type="tel"]::-webkit-outer-spin-button,
+.input-box input[type="tel"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+/* Mobile responsive = switch to vertical */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+    
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .main-wrapper {
+        padding: 10px 0;
+    }
+    
+    .input-box input {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        max-width: 350px;
+    }
+    
+    .logo {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .footer {
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 500px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .input-box input {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

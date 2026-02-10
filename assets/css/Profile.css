@@ -1,0 +1,531 @@
+/* ======================= */
+/*      PROFILE CSS        */
+/* ======================= */
+
+/* Profile Header */
+.profile-header {
+    border-bottom: 1px solid #2f3336;
+    position: relative;
+}
+
+.profile-banner {
+    height: 200px;
+    background: linear-gradient(135deg, #66757f, #00aced);
+    position: relative;
+}
+
+.banner-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #66757f, #00aced);
+}
+
+.profile-pic-large {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 133px;
+    height: 133px;
+    border-radius: 50%;
+    border: 4px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 10;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.profile-pic-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-actions {
+    padding: 60px 20px 20px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-profile-btn, .follow-btn-large {
+    padding: 10px 24px;
+    border: 1px solid #6e767d;
+    background: transparent;
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s;
+    min-width: 120px;
+    text-align: center;
+}
+
+.edit-profile-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.follow-btn-large {
+    background: white;
+    color: black;
+    min-width: 120px;
+}
+
+.follow-btn-large:hover {
+    background: #e6e6e6;
+}
+
+.follow-btn-large.following {
+    background: transparent;
+    color: white;
+    border: 1px solid #6e767d;
+}
+
+.follow-btn-large.following:hover {
+    background: rgba(244, 33, 46, 0.1);
+    color: #f4212e;
+    border-color: #f4212e;
+}
+
+.profile-info {
+    padding: 0 20px 20px;
+}
+
+.profile-info h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.profile-handle {
+    color: #6e767d;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-bio {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 15px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.profile-location, .profile-website, .profile-joined {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6e767d;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.profile-location i, .profile-website i, .profile-joined i {
+    width: 20px;
+    text-align: center;
+}
+
+.profile-website a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.profile-website a:hover {
+    text-decoration: underline;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s;
+}
+
+.stat:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.stat-label {
+    color: #6e767d;
+    font-size: 15px;
+}
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #2f3336;
+    margin-top: 10px;
+    overflow-x: hidden;
+}
+
+.profile-tab {
+    flex: 1;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    color: #6e767d;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+    min-width: 80px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.profile-tab:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.profile-tab.active {
+    color: white;
+}
+
+.profile-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #1d9bf0;
+    border-radius: 2px;
+}
+
+/* Profile posts specific */
+.profile-posts .post-card:first-child {
+    border-top: none;
+}
+
+/* Main content header for profile */
+.main-content .header {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-bottom: 1px solid #2f3336;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-content .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tweet-count {
+    color: #6e767d;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Profile empty state */
+.profile-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6e767d;
+}
+
+.profile-empty-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #6e767d;
+}
+
+.profile-empty-state h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.profile-empty-state p {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Post image in profile */
+.post-image {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.post-image:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design for Profile */
+@media (max-width: 1280px) {
+    .profile-pic-large {
+        width: 110px;
+        height: 110px;
+        font-size: 40px;
+        bottom: -35px;
+    }
+    
+    .profile-actions {
+        padding: 50px 15px 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .profile-banner {
+        height: 180px;
+    }
+    
+    .profile-pic-large {
+        width: 100px;
+        height: 100px;
+        font-size: 36px;
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 680px) {
+    .profile-banner {
+        height: 150px;
+    }
+    
+    .profile-pic-large {
+        width: 90px;
+        height: 90px;
+        font-size: 32px;
+        bottom: -25px;
+        left: 15px;
+        border-width: 3px;
+    }
+    
+    .profile-actions {
+        padding: 40px 15px 15px;
+    }
+    
+    .edit-profile-btn, .follow-btn-large {
+        padding: 8px 16px;
+        font-size: 14px;
+        min-width: 100px;
+    }
+    
+    .profile-info {
+        padding: 0 15px 15px;
+    }
+    
+    .profile-info h2 {
+        font-size: 18px;
+    }
+    
+    .profile-handle {
+        font-size: 14px;
+    }
+    
+    .profile-bio, 
+    .profile-location, 
+    .profile-website, 
+    .profile-joined {
+        font-size: 14px;
+    }
+    
+    .profile-stats {
+        gap: 15px;
+    }
+    
+    .stat-number, .stat-label {
+        font-size: 14px;
+    }
+    
+    .profile-tab {
+        padding: 12px 8px;
+        font-size: 13px;
+        min-width: 70px;
+    }
+    
+    .main-content .header {
+        padding: 12px 15px;
+    }
+    
+    .main-content .header h1 {
+        font-size: 18px;
+    }
+    
+    .tweet-count {
+        font-size: 12px;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .profile-pic-large {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+        bottom: -20px;
+    }
+    
+    .profile-banner {
+        height: 130px;
+    }
+    
+    .profile-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .profile-tab {
+        min-width: 60px;
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+    
+    .profile-stats {
+        gap: 12px;
+    }
+    
+    .edit-profile-btn, .follow-btn-large {
+        padding: 6px 12px;
+        font-size: 13px;
+        min-width: 90px;
+    }
+}
+
+/* Fix for post stats in profile page */
+.profile-page .post-stats {
+    justify-content: flex-start;
+    gap: 40px;
+    overflow: visible;
+}
+
+/* Fix any scroll issues */
+.profile-page .posts-feed {
+    overflow: visible;
+}
+
+.profile-page .post-card {
+    overflow: hidden;
+}
+
+
+/* ======================= */
+/*      LOGOUT BUTTON      */
+/* ======================= */
+
+/* Logout Button Styles */
+.logout-container {
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #2f3336;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #e7e9ea;
+    text-decoration: none;
+    border-radius: 29px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ff4b4b;
+}
+
+.logout-btn i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.logout-btn span {
+    font-size: 15px;
+}
+
+/* Mobile logout button */
+.logout-mobile {
+    color: #ff4b4b !important;
+}
+
+.logout-mobile:hover {
+    color: #ff6b6b !important;
+}
+
+/* Profile page specific adjustments */
+.profile-page .sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page .logout-container {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1000px) {
+    .logout-container {
+        margin-top: 15px;
+        padding: 8px 0;
+    }
+    
+    .logout-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+    
+    .logout-btn i {
+        font-size: 16px;
+        width: 22px;
+    }
+}
+
+@media (max-width: 680px) {
+    .logout-container {
+        display: none; /* Hide on mobile, using mobile nav instead */
+    }
+    
+    .logout-mobile {
+        display: flex !important;
+    }
+}

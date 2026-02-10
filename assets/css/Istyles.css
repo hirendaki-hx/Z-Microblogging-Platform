@@ -1,0 +1,306 @@
+/* ======================= */
+/*      GLOBAL STYLING     */
+/* ======================= */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+
+  /* FIX: column layout to keep footer at bottom */
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Wrapper to push footer to bottom */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+
+/* ======================= */
+/*         FOOTER          */
+/* ======================= */
+footer {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+
+
+/* ======================= */
+/*      LEFT SECTION       */
+/* ======================= */
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.logo-placeholder {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* ======================= */
+/*      RIGHT SECTION      */
+/* ======================= */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  
+  align-items: flex-start;
+  max-width: 500px;
+  margin-right: 100px;
+}
+
+
+
+/* ======================= */
+/*        HEADINGS         */
+/* ======================= */
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* FIXED: removed stray "A" that broke layout */
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+
+
+/* ======================= */
+/*         BUTTONS         */
+/* ======================= */
+.btn,
+.btn-dark {
+  width: 100%;
+  max-width: 350px;
+  padding: 11px;
+  margin: 12px 0;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn {
+  border: none;
+  background: #fff;
+  color: #000;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-dark {
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-dark:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+/* ======================= */
+/*        OR LINE          */
+/* ======================= */
+.or-line {
+    display: flex;
+    justify-content: center; /* centers OR horizontally */
+    align-items: center;      /* centers OR vertically */
+    
+    width: 100%;
+    max-width: 325px;
+
+    padding: 11px;
+    margin: 12px 0;
+
+    font-size: 14px;
+    opacity: 0.7;
+    
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+/* ======================= */
+/*       SMALL TEXT        */
+/* ======================= */
+.small-text {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #444;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+
+/* ======================= */
+/*     RESPONSIVENESS      */
+/* ======================= */
+
+/* ---------- Laptops / Tablets ---------- */
+@media (max-width: 1200px) {
+  .left-section {
+    margin-left: 40px;
+  }
+
+  .logo-placeholder {
+    width: 400px;
+    height: 400px;
+  }
+
+  .right-section {
+    margin-left: 40px;
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Tablets & Large Phones ---------- */
+@media (max-width: 900px) {
+
+  .main-wrapper {
+    flex-direction: column; /* IMPORTANT for stacked layout */
+  }
+
+  .left-section {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  .logo-placeholder {
+    width: 300px;
+    height: auto;
+  }
+
+  .right-section {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn, .btn-dark {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Mobile Phones ---------- */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .btn, .btn-dark {
+    width: 90%;
+  }
+
+  .logo-placeholder {
+    width: 220px;
+  }
+}
